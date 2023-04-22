@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/chooseRole"
-        android:name="com.example.androidpractise5.ChooseRole"
+        android:name="com.example.androidpractise5.UI.views.ChooseRole"
         android:label="fragment_choose_role"
         tools:layout="@layout/fragment_choose_role" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.androidpractise5.Profile"
+        android:name="com.example.androidpractise5.UI.views.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration"
-        android:name="com.example.androidpractise5.Registration"
+        android:name="com.example.androidpractise5.UI.views.Registration"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action

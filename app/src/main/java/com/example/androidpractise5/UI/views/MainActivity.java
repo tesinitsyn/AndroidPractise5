@@ -1,7 +1,9 @@
-package com.example.androidpractise5;
+package com.example.androidpractise5.UI.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.androidpractise5.R;
 
 public class MainActivity extends AppCompatActivity {
 
