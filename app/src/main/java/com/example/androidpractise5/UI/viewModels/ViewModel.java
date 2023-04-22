@@ -11,7 +11,7 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
             new User(null, null, null, null)));
 
     public LiveData<Repository> getUserID(){
-        return userID
+        return userID;
     }
 
     public void addUser(String email, String password, String name, String surname){
