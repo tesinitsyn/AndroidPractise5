@@ -1,5 +1,7 @@
 package com.example.androidpractise5.UI.views;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +21,10 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Objects;
 
 
@@ -35,6 +42,17 @@ public class Registration extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //appSpecificStorage
+        try {
+            String filename = "appSpecificStorage";
+            File file = new File(getActivity().getFilesDir() + filename);
+            Log.d(filename, String.valueOf(file.createNewFile()));
+            file.delete();
+        } catch (
+                IOException e) {
+            throw new RuntimeException(e);
+        }
+
         super.onCreate(savedInstanceState);
     }
 
