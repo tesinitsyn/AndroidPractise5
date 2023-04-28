@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.androidpractise5.R;
+import com.example.androidpractise5.UI.viewModels.RegistrationViewModels;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.jetbrains.annotations.Nullable;
@@ -59,6 +61,13 @@ public class Registration extends Fragment {
             profileInfo.putString("email", Objects.requireNonNull(email.getText()).toString());
             Navigation.findNavController(view).navigate(R.id.action_registration_to_profile, profileInfo);
         });
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        RegistrationViewModels model = new ViewModelProvider(this).get(RegistrationViewModels.class);
+        model.getUsers().observe(getViewLifecycleOwner(), (value) -> {
+        });
     }
 }

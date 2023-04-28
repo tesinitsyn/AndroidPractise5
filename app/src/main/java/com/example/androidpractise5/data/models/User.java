@@ -1,4 +1,4 @@
-package com.example.androidpractise5.data.dataSourceRepository;
+package com.example.androidpractise5.data.models;
 
 public class User {
     private String email;
